@@ -8,7 +8,9 @@ function tampilkanList(){
     var testing = localStorage.getItem('kumpulan');
     // console.log(testing);
     var a = JSON.parse(testing);
-    kosong = a;
+    if(a){
+        kosong = a;
+    }
     // console.log(`a = ${a}`);
     // console.log(`a = ${a[0].nama}`);
 
@@ -36,14 +38,14 @@ function tampilkanList(){
 };
 
 // untuk ambil data lama
-// if(localStorage.getItem('kumpulan') !== null){
-//         var t1 = localStorage.getItem('kumpulan');
-//         var a1 = JSON.parse(t1);
-//         for (let i = 0; i < a1.length; i++) {
-//             kosong.push(a1[i]);
-//             // console.log(kosong)
-//         }
-//     };
+if(localStorage.getItem('kumpulan') !== null){
+        var t1 = localStorage.getItem('kumpulan');
+        var a1 = JSON.parse(t1);
+        for (let i = 0; i < a1.length; i++) {
+            kosong.push(a1[i]);
+            // console.log(kosong)
+        }
+    };
 // -------------------
 
 function tambahList(){
